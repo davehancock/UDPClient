@@ -28,7 +28,7 @@ public class UDPBroadcastLoader {
             clientSocket.send(sendPacket);
 
             System.out.println("SENT PACKET:" + sendPacket);
-            Thread.sleep(3000);
+            Thread.sleep(2500);
         }
     }
 
