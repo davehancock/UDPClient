@@ -10,24 +10,19 @@ import java.net.InetAddress;
  */
 public class UDPBroadcastLoader {
 
-    //2.124.16.160
-    //public static final String TARGET_IP_ADDRESS = "94.0.19.133";
-
     public static final String TARGET_IP_ADDRESS = "192.168.0.255";
-
-    //public static final String TARGET_IP_ADDRESS = "2.124.16.160";
-
-    //public static final String TARGET_MAC_ADDRESS = "44-85-00-01-0A-D1";
 
     public static final String TARGET_MAC_ADDRESS = "10-BF-48-86-56-40";
 
 
     public static void main(String[] args) throws IOException, InterruptedException {
 
+        // Send a series of magic packets at a fixed interval for debugging purposes.
         while (true) {
             sendMagicPacket(TARGET_IP_ADDRESS, TARGET_MAC_ADDRESS);
             Thread.sleep(3000);
         }
+
     }
 
     private static void sendMagicPacket(String ipAddress, String macAddress) throws IOException {
@@ -46,13 +41,13 @@ public class UDPBroadcastLoader {
         InetAddress address = InetAddress.getByName(ipAddress);
 
         DatagramPacket packet = new DatagramPacket(bytes, bytes.length, address, 9);
-
         DatagramSocket socket = new DatagramSocket();
+
         socket.send(packet);
 
         System.out.println("Sending Wake-on-LAN packet");
 
-        //socket.close();
+        socket.close();
     }
 
 
