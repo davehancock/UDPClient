@@ -5,9 +5,7 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 
-/**
- * @author David Hancock
- */
+
 public class UDPBroadcastLoader {
 
     public static final String TARGET_IP_ADDRESS = "192.168.0.255";
@@ -22,10 +20,10 @@ public class UDPBroadcastLoader {
             sendMagicPacket(TARGET_IP_ADDRESS, TARGET_MAC_ADDRESS);
             Thread.sleep(3000);
         }
-
     }
 
-    private static void sendMagicPacket(String ipAddress, String macAddress) throws IOException {
+
+    public static void sendMagicPacket(String ipAddress, String macAddress) throws IOException {
 
         byte[] macBytes = getMacBytes(macAddress);
         byte[] bytes = new byte[6 + 16 * macBytes.length];
