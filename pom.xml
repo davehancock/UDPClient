@@ -4,7 +4,7 @@
 
     <groupId>com.djh</groupId>
     <artifactId>UDPClient</artifactId>
-    <version>1.13-SNAPSHOT</version>
+    <version>1.13</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -39,7 +39,7 @@
 
     <scm>
         <connection>scm:git:git@github.com:daves125125/UDPClient.git</connection>
-        <tag>HEAD</tag>
+        <tag>UDPClient-1.13</tag>
     </scm>
 
     <distributionManagement>
