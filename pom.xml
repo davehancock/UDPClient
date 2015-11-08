@@ -4,7 +4,7 @@
 
     <groupId>com.djh</groupId>
     <artifactId>UDPClient</artifactId>
-    <version>1.2-SNAPSHOT</version>
+    <version>1.10-SNAPSHOT</version>
 
     <build>
         <plugins>
@@ -18,9 +18,7 @@
 
     <scm>
         <connection>scm:git:git@github.com:daves125125/UDPClient.git</connection>
-        <url>scm:git:git@github.com:daves125125/UDPClient</url>
-        <developerConnection>scm:git:git@github.com:daves125125/UDPClient.git</developerConnection>
-      <tag>UDPClient-1.1</tag>
+      <tag>UDPClient-1.8</tag>
   </scm>
 
     <distributionManagement>
